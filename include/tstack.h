@@ -4,8 +4,7 @@
 
 template<typename T, int size>
 class TStack {
-
-private:
+ private:
     static const int SSize = size;
     T data[SSize];
     int top;
@@ -15,14 +14,10 @@ private:
     void push(const T &item) {
         if (top <= size - 1)
             data[top++] = item;
-        else
-            throw std::string("Full");
     }
     T pop() {
         if (top > 0)
             return data[--top];
-        else
-            throw std::string("Empty");
     }
     bool isEmpty() {
         return top == 0;
@@ -30,8 +25,6 @@ private:
     T get() {
         if (!isEmpty())
             return data[top - 1];
-        else
-            throw std::string("Empty");
     }
 };
 #endif  // INCLUDE_TSTACK_H_
