@@ -18,6 +18,8 @@ class TStack {
     T pop() {
         if (top > 0)
             return data[--top];
+        else
+            throw 0;
     }
     bool isEmpty() {
         return top == 0;
@@ -25,6 +27,8 @@ class TStack {
     T get() {
         if (!isEmpty())
             return data[top - 1];
+        else
+            throw 0;
     }
 };
 #endif  // INCLUDE_TSTACK_H_
