@@ -4,10 +4,12 @@
 
 template<typename T, int size>
 class TStack {
+
 private:
     static const int SSize = size;
     T data[SSize];
     int top;
+
  public:
     TStack() : top(0) {}
     void push(const T &item) {
@@ -29,7 +31,7 @@ private:
         if (!isEmpty())
             return data[top - 1];
         else
-            throw std::string("Empty!");
+            throw std::string("Empty");
     }
 };
 #endif  // INCLUDE_TSTACK_H_
